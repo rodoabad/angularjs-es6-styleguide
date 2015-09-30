@@ -1,4 +1,4 @@
-# AngularJS Styleguide
+# AngularJS ES6 Styleguide
 
 This styleguide is another take on how to write AngularJS together with ESLint and ES6.
 
