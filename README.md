@@ -166,6 +166,30 @@ getTotal(key, items) {
 }
 ```
 
+### Naming Convention
+
+Functions that will handle actions should be considered as events and therefore should be prefixed with `on`.
+
+```javascript
+// Recommended
+
+function onUserEdit(name) {
+
+  // Code goes here
+
+}
+```
+
+```javascript
+// Avoid
+
+function userEdit(name) {
+
+  // Code goes here
+
+}
+```
+
 ## Modules
 
 Declare modules without a variable.
@@ -203,7 +227,7 @@ Do not use `ng-controller` in your HTML files. Either declare your controller an
 
 <div ng-controller="MainCtrl as vm">
 
-  <!-- HTML goes here -->
+  <!-- Code goes here -->
   
 </div>
 ```
