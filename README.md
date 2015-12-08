@@ -5,7 +5,7 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 ## Table of Contents
 
 1. [Spaces, tabs, and indentation](#spaces-tabs-and-indentation)
-2.
+2. [import and export](#import-and-export)
 3. [const, let, and var](#const-let-and-var)
 4. [Methods and chaining](#methods-and-chaining)
 5. [Functions](#functions)
@@ -27,19 +27,24 @@ This styleguide is another take on how to write AngularJS together with ESLint a
  
 *Why?* Tab spacing differs on IDEs and text editors while spaces do not. By using spaces we eliminate that inconsistency.
 
-## imports and exports
+## import and export
 
-- **imports** from external modules e.g. `node_modules` should be at the top most level of your file
+- Global imports e.g. `node_modules` should be at the top most level of your file. Local imports should then be after your global imports
+- Constructors must use TitleCase i.e. `import MyServer from './my-server'`.
 
 ```javascript
+// Recommended
 import angular from 'angular';
+import uiRouter from 'angular-ui-router';
 
-// The rest of your code
+import MyLocalSvc from './my-local-svc';
+
+// ...
 ```
 
 ## const, let, and var
 
-Declarations must be in the same line as the keyword.
+Declarations must be on the same line as the keyword.
 
 ```javascript
 // Recommended
@@ -74,8 +79,7 @@ Single line declarations should be grouped with other single line declarations w
 ```javascript
 // Recommended
 
-const _ = window._,
-  angular = window.angular;
+const maxUsers = 100;
   
 const defaultGroups = [
     admin,
@@ -87,8 +91,7 @@ const defaultGroups = [
 ```javascript
 // Avoid
 
-const _ = window._,
-  angular = window.angular;
+const maxUsers = 100,
   defaultGroups = [
   admin,
   manager,
@@ -127,9 +130,7 @@ There should be a space before and after the function declaration and before and
 
 getTotal(key, items) {
 
-  return items.reduce((sum, item) => {
-    return sum + item[key];
-  }, 0);
+  return items.reduce((sum, item) => sum + item[key], 0);
 
 }
 ```
@@ -138,9 +139,7 @@ getTotal(key, items) {
 // Avoid
 
 getTotal(key, items) {
-  return items.reduce((sum, item) => {
-    return sum + item[key];
-  }, 0);
+  return items.reduce((sum, item) => sum + item[key], 0);
 }
 ```
 
@@ -149,9 +148,7 @@ getTotal(key, items) {
 
 getTotal(key, items) {
 
-  return items.reduce((sum, item) => {
-    return sum + item[key];
-  }, 0);
+  return items.reduce((sum, item) => sum + item[key], 0);
 }
 ```
 
@@ -159,9 +156,7 @@ getTotal(key, items) {
 // Avoid
 
 getTotal(key, items) {
-  return items.reduce((sum, item) => {
-    return sum + item[key];
-  }, 0);
+  return items.reduce((sum, item) => sum + item[key], 0);
   
 }
 ```
