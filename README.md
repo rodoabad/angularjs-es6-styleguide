@@ -5,7 +5,7 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 ## Table of Contents
 
 1. [Spaces, tabs, and indentation](#spaces-tabs-and-indentation)
-2. [IIFE, strict mode, and window](#iife-strict-mode-and-window)
+2.
 3. [const, let, and var](#const-let-and-var)
 4. [Methods and chaining](#methods-and-chaining)
 5. [Functions](#functions)
@@ -14,6 +14,11 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 8. [Controllers](#controllers)
 9. [Factories and Services](#factories-and-services)
 10. [Directives](#directives)
+11. 
+
+## Legacy Styles
+
+1. [IIFE, strict mode, and window](#iife-strict-mode-and-window)
 
 ## Spaces, tabs, and indentation
 
@@ -22,19 +27,14 @@ This styleguide is another take on how to write AngularJS together with ESLint a
  
 *Why?* Tab spacing differs on IDEs and text editors while spaces do not. By using spaces we eliminate that inconsistency.
 
-## IIFE, strict mode, and window
+## imports and exports
 
-- Every single file must be wrapped in an IIFE (Immediately-Invoked Function Expression) and have strict mode enabled. This prevents variables and function declarations from leaking outside of your current scope.
-- Global variables like `angular` should be localized.
+- **imports** from external modules e.g. `node_modules` should be at the top most level of your file
 
 ```javascript
-(() => {
+import angular from 'angular';
 
-  'use strict';
-
-  const angular = window.angular;
-  
-})();
+// The rest of your code
 ```
 
 ## const, let, and var
@@ -371,6 +371,23 @@ Each dependency must be in a new line if there is more than one dependency being
         _$rootScope_,
         _$state_
       ) => {});
+```
+
+#Legacy
+
+## IIFE, strict mode, and window
+
+- Every single file must be wrapped in an IIFE (Immediately-Invoked Function Expression) and have strict mode enabled. This prevents variables and function declarations from leaking outside of your current scope.
+- Global variables like `angular` should be localized.
+
+```javascript
+(() => {
+
+  'use strict';
+
+  const angular = window.angular;
+  
+})();
 ```
 
 # License
