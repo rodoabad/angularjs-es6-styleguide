@@ -39,7 +39,7 @@ import uiRouter from 'angular-ui-router';
 
 import MyLocalSvc from './my-local-svc';
 
-// ...
+// Code goes here
 ```
 
 ## const, let, and var
