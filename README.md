@@ -278,29 +278,23 @@ angular
 ```javascript
 // Recommended
 
-(() => {
+import angular from 'angular';
 
-  'use strict';
+class MainCtrl {
 
-  const angular = window.angular;
+  /* @ngInject */
+  constructor() {
 
-  class MainCtrl {
-
-    constructor() {
-
-      this.data = data;
-
-    }
+    this.data = data;
 
   }
 
-  angular
-    .module('app')
-    .controller('MainCtrl', [
-      MainCtrl
-    ]);
+}
 
-})();
+angular
+  .module('app')
+  .controller('MainCtrl', MainCtrl);
+
 ```
 
 
@@ -309,38 +303,19 @@ angular
 ```javascript
 // Boilerplate
 
-(() => {
+import template from './index.html';
 
-  'use strict';
+function mainDirective() {
+  return {
+    restrict: 'E',
+    template: template
+  };
+}
 
-  const angular = window.angular;
-
-  function mainDirective(
-    MainDirectiveSvc
-  ) {
-
-    function link() {
-
-      // Code goes here
-
-    }
-
-    return {
-      link: link,
-      restrict: 'E',
-      templateUrl: 'main-directive.html'
-    };
-
-  }
-
-  angular
-    .module('app')
-    .directive('mainDirective', [
-      'MainDirectiveSvc',
-      mainDirective
-    ]);
-
-})();
+export default angular
+  .module('app.mainDirective', [])
+  .directive('mainDirective', mainDirective)
+  .name;
 ```
 
 ## Unit Testing
