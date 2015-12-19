@@ -25,8 +25,9 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 
 ## import and export
 
-- Third party imports e.g. `node_modules` should be at the top-most level of your file followed by lLocal imports separated by a whitespace.
+- Third party imports e.g. `node_modules` should be at the top-most level of your file followed by local imports separated by a whitespace.
 - Constructors must use TitleCase i.e. `import MyService from './my-service'`.
+- There should be a whitespace between your imports and the rest of your code.
 
 ```javascript
 // Recommended
