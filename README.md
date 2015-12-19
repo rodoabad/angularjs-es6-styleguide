@@ -39,39 +39,53 @@ import MyService from './my-service';
 // Code goes here
 ```
 
-## const, let, and var
+## const and let
 
-Declarations must be on the same line as the keyword.
+- `const` and `let` declarations must be on the same line as the keyword.
+- `const` declarations should always be higher than `let` declarations and each group should be separated by a whitespace.
+- `var` has no place in ES6.
 
 ```javascript
 // Recommended
 
-let users = UserSvc.getUsers();
+const users = UserSvc.getUsers();
+
+let currentUserCount = 0;
 ```
 
 ```javascript
 // Avoid
 
-let
+const
   users = UserSvc.getUsers();
+  
+let
+  currentUserCount = 0;
 ```
 
 ```javascript
 // Recommended
 
-let admins = AdminSvc.getAdmins(),
+const admins = AdminSvc.getAdmins(),
   users = UserSvc.getUsers();
+  
+let currentAdminAcount = 0;
+  currentUserCount = 0;
 ```
 
 ```javascript
 // Avoid
 
-let
+const
   admins = AdminSvc.getAdmins(),
   users = UserSvc.getUsers();
+  
+let 
+  currentAdminAcount = 0;
+  currentUserCount = 0;
 ```
 
-Single line declarations should be grouped with other single line declarations while multi-line declarations should be in their own group.
+Single line declarations should be grouped with similar single line declarations while multi-line declarations should be in their own group. Each declaration must be separated by a whitespace.
 
 ```javascript
 // Recommended
