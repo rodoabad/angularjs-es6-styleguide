@@ -4,17 +4,21 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 
 ## Table of Contents
 
-1. [Spaces, tabs, and indentation](#spaces-tabs-and-indentation)
-2. [import and export](#import-and-export)
-3. [const, let, and var](#const-let-and-var)
-4. [Methods and chaining](#methods-and-chaining)
-5. [Functions](#functions)
-6. [Modules](#modules)
-7. [Routes](#routes)
-8. [Controllers](#controllers)
-9. [Factories and Services](#factories-and-services)
-10. [Directives](#directives)
-11. 
+1. [Whitespace is FREE](#whitespace-is-free)
+2. [Spaces, tabs, and indentation](#spaces-tabs-and-indentation)
+3. [import and export](#import-and-export)
+4. [const, let, and var](#const-let-and-var)
+5. [Methods and chaining](#methods-and-chaining)
+6. [Functions](#functions)
+7. [Modules](#modules)
+8. [Routes](#routes)
+9. [Controllers](#controllers)
+10. [Factories and Services](#factories-and-services)
+11. [Directives](#directives)
+
+## Whitespace is FREE
+
+I cannot stress this enough. Adding whistespace is free and it makes your code easier to follow since you can now start grouping snippets of your code into their own mini-blocks.
 
 ## Spaces, tabs, and indentation
 
