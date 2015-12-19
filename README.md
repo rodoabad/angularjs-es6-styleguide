@@ -134,7 +134,9 @@ Single method calls must be written in a single line.
 ```javascript
 // Recommended
 
-angular.module('app', [])
+angular.module('app', []);
+
+// Rest of the code
 ```
 
 Chained methods must be in a new line (per method). This provides a clear understanding of what's going on.
@@ -144,9 +146,10 @@ Chained methods must be in a new line (per method). This provides a clear unders
 
 angular
   .module('app')
-  .controller('MainCtrl', [
-    MainCtrl
-  ]);
+  .controller('MainCtrl', MainCtrl)
+  .directive('mainDirective', mainDirective);
+
+// Rest of the code
 ```
 
 ## Functions
@@ -161,6 +164,8 @@ getTotal(key, items) {
   return items.reduce((sum, item) => sum + item[key], 0);
 
 }
+
+// Rest of the code
 ```
 
 ```javascript
@@ -169,6 +174,8 @@ getTotal(key, items) {
 getTotal(key, items) {
   return items.reduce((sum, item) => sum + item[key], 0);
 }
+
+// Rest of the code
 ```
 
 ```javascript
@@ -178,6 +185,8 @@ getTotal(key, items) {
 
   return items.reduce((sum, item) => sum + item[key], 0);
 }
+
+// Rest of the code
 ```
 
 ```javascript
@@ -187,6 +196,8 @@ getTotal(key, items) {
   return items.reduce((sum, item) => sum + item[key], 0);
   
 }
+
+// Rest of the code
 ```
 
 ### Naming Convention
@@ -198,9 +209,11 @@ Functions that will handle actions should be considered as events and therefore 
 
 function onUserEdit(name) {
 
-  // Code goes here
+  // Block code goes here
 
 }
+
+// Rest of the code
 ```
 
 ```javascript
@@ -208,27 +221,33 @@ function onUserEdit(name) {
 
 function userEdit(name) {
 
-  // Code goes here
+  // Block code goes here
 
 }
+
+// Rest of the code
 ```
 
 ## Modules
 
-Declare modules without a variable.
+### Declaration
 
-*Why?* Since we only use one component per file, there is no need to use a variable.
+- Declare modules without a variable. Since we only use one component per file, there is no need to use a variable.
 
 ```javascript
 // Recommended
 
 angular.module('app', []);
+
+// Rest of the code
 ```
 
 ```javascript
 // Avoid
 
 const app = angular.module('app', []);
+
+// Rest of the code
 ```
 
 ## Controllers
