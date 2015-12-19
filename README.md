@@ -36,7 +36,7 @@ import uiRouter from 'angular-ui-router';
 
 import MyService from './my-service';
 
-// Code goes here
+// Rest of the code
 ```
 
 ## const and let
@@ -44,6 +44,7 @@ import MyService from './my-service';
 - `const` and `let` declarations must be on the same line as the keyword.
 - `const` declarations should always be higher than `let` declarations and each group should be separated by a whitespace.
 - `var` has no place in ES6.
+- A whitespace should separate your declarations from the rest of your code.
 
 ```javascript
 // Recommended
@@ -51,6 +52,8 @@ import MyService from './my-service';
 const users = UserSvc.getUsers();
 
 let currentUserCount = 0;
+
+// Rest of the code
 ```
 
 ```javascript
@@ -61,6 +64,8 @@ const
   
 let
   currentUserCount = 0;
+
+// Rest of the code
 ```
 
 ```javascript
@@ -71,6 +76,8 @@ const admins = AdminSvc.getAdmins(),
   
 let currentAdminAcount = 0;
   currentUserCount = 0;
+
+// Rest of the code
 ```
 
 ```javascript
@@ -83,9 +90,11 @@ const
 let 
   currentAdminAcount = 0;
   currentUserCount = 0;
+
+// Rest of the code
 ```
 
-Single line declarations should be grouped with similar single line declarations while multi-line declarations should be in their own group. Each declaration must be separated by a whitespace.
+Single line declarations should be grouped with similar single line declarations while multi-line declarations should be in their own group. Each group must be separated by a whitespace.
 
 ```javascript
 // Recommended
@@ -97,6 +106,8 @@ const defaultGroups = [
     manager,
     user
   ];
+
+// Rest of the code
 ```
 
 ```javascript
@@ -108,6 +119,8 @@ const maxUsers = 100,
   manager,
   user
 ];
+
+// Rest of the code
 ```
 
 ## Methods and chaining
