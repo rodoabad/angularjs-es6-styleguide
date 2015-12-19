@@ -16,28 +16,24 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 10. [Directives](#directives)
 11. 
 
-## Legacy Styles
-
-1. [IIFE, strict mode, and window](#iife-strict-mode-and-window)
-
 ## Spaces, tabs, and indentation
 
 - Use spaces instead of tabs.
-- Use 2 spaces for your indentation.
+- Use *2* spaces for your indentation.
  
 *Why?* Tab spacing differs on IDEs and text editors while spaces do not. By using spaces we eliminate that inconsistency.
 
 ## import and export
 
-- Global imports e.g. `node_modules` should be at the top most level of your file. Local imports should then be after your global imports
-- Constructors must use TitleCase i.e. `import MyServer from './my-server'`.
+- Third party imports e.g. `node_modules` should be at the top-most level of your file followed by lLocal imports separated by a whitespace.
+- Constructors must use TitleCase i.e. `import MyService from './my-service'`.
 
 ```javascript
 // Recommended
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import MyLocalSvc from './my-local-svc';
+import MyService from './my-service';
 
 // Code goes here
 ```
@@ -359,6 +355,10 @@ Each dependency must be in a new line if there is more than one dependency being
   
 })();
 ```
+
+## Legacy Styles
+
+1. [IIFE, strict mode, and window](#iife-strict-mode-and-window)
 
 # License
 
