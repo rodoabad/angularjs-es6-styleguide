@@ -19,7 +19,7 @@ This styleguide is another take on how to write AngularJS together with ESLint a
 ## Spaces, tabs, and indentation
 
 - Use spaces instead of tabs.
-- Use *2* spaces for your indentation.
+- Use **2** spaces for your indentation.
  
 *Why?* Tab spacing differs on IDEs and text editors while spaces do not. By using spaces we eliminate that inconsistency.
 
