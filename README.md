@@ -232,7 +232,7 @@ function userEdit(name) {
 
 ### Declaration
 
-- Declare modules without a variable. Since we only use one component per file, there is no need to use a variable.
+Declare modules without a variable. Since we only use one component per file, there is no need to use a variable.
 
 ```javascript
 // Recommended
@@ -246,6 +246,47 @@ angular.module('app', []);
 // Avoid
 
 const app = angular.module('app', []);
+
+// Rest of the code
+```
+
+### Naming Convention
+
+Large applications typically has a lot of views that do different things. Naming your module per view allows you to separate your components depending on where they are being used rather than what they do. By doing this you can then have independent modules that you can easily extract into another repository if it gets too big living in your current repository.
+
+*Assume your main application is called `app` and it has two separate views called `admin` and `user`.*
+
+- Use dot notation to separate your views and subviews.
+- Use a named array for your dependencies. This keeps your angular code lean.
+
+```javascript
+// Recommended
+import angular from 'angular';
+
+import admin from './views/admin';
+import user from './views/user';
+
+const dependencies = [
+  admin,
+  user
+];
+
+angular.module('app', dependencies);
+
+// Rest of the code
+```
+
+```javascript
+// Avoid
+import angular from 'angular';
+
+import admin from './views/admin';
+import user from './views/user';
+
+angular.module('app', [
+  admin,
+  user
+]);
 
 // Rest of the code
 ```
