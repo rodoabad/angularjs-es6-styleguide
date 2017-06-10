@@ -336,16 +336,6 @@ angular
 
 angular
   .module('app')
-  .controller('mainCtrl', [
-    mainCtrl
-  ]);
-```
-
-```javascript
-// Avoid
-
-angular
-  .module('app')
   .controller('main', [
     main
   ]);
